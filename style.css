@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 8px rgba(0, 0,0,.5) ;
+    z-index: 10;
+}
+ .navbar-brand{
+    font-weight: 600px;
+ }
+.nav-link{
+    color: white !important; 
+    border-bottom: 1px solid transparent;
+ }
+ .nav-link:hover{
+    border-bottom: 1px solid white;
+
+ }
+ section{
+    width: 100%;
+    min-height: 100vh;
+ }
+ #home{
+    width: 100%;
+    height: 100vh;
+    background: url(prt.jpg); 
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+ #home p{
+   position: absolute;
+   top: 50%;
+   font-size: 50px;
+   opacity: 0;
+   animation: text 3s ease-in-out;
+}
+#home p:nth-child(2){
+   animation-delay: 3s;
+
+}
+#home p:nth-child(3){
+   animation-delay: 6s;
+
+}
+#home p:nth-child(4){
+   animation-delay: 9s;
+
+}
+#home p:nth-child(5){
+   animation-delay: 12s;
+
+}
+#home p:nth-child(6){
+   animation-delay: 15s;
+
+}
+#home p:nth-child(7){
+   animation-delay: 18s;
+
+}
+#home p:nth-child(8){
+   animation-delay: 21s;
+
+}
+#home p:nth-child(9){
+   animation-delay: 24s;
+
+}
+
+@keyframes text {
+   50%{
+       opacity: 1;
+   }
+   100%{
+       opacity: 0;
+   }
+}
+#home span{
+   color: blueviolet;
+}
+@media screen and (max-width:576px){
+   #home p {
+       font-size: 40px;
+   }
+   
+}
+
+
+  /* about section */
+
+
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#000;
+}
+/* Circle styling */
+.circle {
+    width: 300px; /* Circle size */
+    height: 300px; /* Circle size */
+    background: lightgreen;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden; /* Hide any part of the image that goes beyond the circle */
+}
+
+/* Image inside the circle */
+.circle img {
+    position: absolute;
+    width: 100%; /* Ensure the image fills the circle */
+    height: 100%; /* Ensure the image fills the circle */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-radius: 50%; /* Keeps the image rounded */
+}
+
+/* Text Content Styling */
+#about h2 {
+    font-size: 70px;
+    margin-bottom: 1rem;
+    color:#FFFFFF;
+
+}
+
+#about p {
+    font-size: 20px;
+    color:#FFFFFF;
+}
+
+ /* skill section */
+ #skills{
+    padding-top: 5%;
+    background: silver;
+ }
+ #skills .container{
+    margin-top: 6%;
+    margin-bottom: 6%;
+ }
+ label{
+    font-size: 20px;
+ }
+ .progress{
+    height: 30px;
+    box-shadow: 2px 4px 5px gray, -2px -2px 5px white;
+ }
+ .progress:hover{
+    box-shadow: 2px 4px 5px white, -2px -2px 5px gray;
+
+ }
+ #contact{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:silver;
+ }
+
+/* General Section Styling */
+#contact {
+   background: linear-gradient(to bottom, #f8f9fa, #e9ecef); /* Soft gradient background */
+   padding: 60px 0; /* Top and bottom padding for spacing */
+ }
+ 
+ .box {
+   padding: 30px;
+   border-radius: 10px;
+   background-color: #ffffff;
+   border: 1px solid #e0e0e0;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100%;
+ }
+ 
+ /* Hover effect on box */
+ .box:hover {
+   transform: translateY(-5px); /* Lift effect */
+   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+ }
+ 
+ /* Style for headers */
+ h4 {
+   color: #333;
+   font-family: 'Arial', sans-serif;
+   font-weight: 700;
+   margin-bottom: 20px;
+ }
+ 
+ /* Address Section Styling */
+ #contact .box p {
+   font-size: 16px;
+   color: #555;
+   line-height: 1.6;
+ }
+ 
+ /* Input and Textarea Styling */
+ input.form-control, textarea.form-control {
+   padding: 12px;
+   border-radius: 8px;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+   font-size: 16px;
+   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ /* Focused input and textarea effect */
+ input.form-control:focus, textarea.form-control:focus {
+   border-color: #007bff;
+   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+ }
+ 
+ /* Button Styling */
+ button#sendBtn {
+   padding: 12px;
+   border-radius: 8px;
+   border: none;
+   background-color: #007bff;
+   color: white;
+   font-size: 16px;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+ 
+ button#sendBtn:hover {
+   background-color: #0056b3;
+   transform: translateY(-2px); /* Slight lift on hover */
+ }
+ 
+ /* Spacing between columns */
+ .row .col-md-6 {
+   margin-bottom: 30px;
+ }
+ 
+ /* Responsive Styling for Smaller Devices */
+ @media (max-width: 768px) {
+   #contact {
+     padding: 40px 0; /* Less padding for smaller screens */
+   }
+   .box {
+     padding: 20px;
+   }
+ }
+
+ 
+#education{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: white;
+}
+
+/* Add hover effect to cards */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.hover-effect:hover {
+  transform: translateY(-5px); /* Lift the card */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Increase shadow on hover */
+}
+
+/* Optional: Additional card styles */
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+ 
